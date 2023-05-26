@@ -27,6 +27,12 @@ namespace UserRegistration
             {
                 return false;
             }
+            // Check if the password contains exactly 1 special character
+            if (!Regex.IsMatch(password, @"^[a-zA-Z0-9]*[^a-zA-Z0-9]{1}[a-zA-Z0-9]*$"))
+            {
+                return false;
+            }
+
 
             // All rules passed
             return true;
