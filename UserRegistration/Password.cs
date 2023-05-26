@@ -22,6 +22,11 @@ namespace UserRegistration
             {
                 return false;
             }
+            // Check if the password contains at least 1 numeric character
+            if (!Regex.IsMatch(password, @"\d"))
+            {
+                return false;
+            }
 
             // All rules passed
             return true;
