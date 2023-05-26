@@ -34,7 +34,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("Invalid last name.");
             }*/
-            Console.WriteLine("Enter your email address: ");
+            /*Console.WriteLine("Enter your email address: ");
             string email = Console.ReadLine();
 
             if (ValidEmail.IsValidEmail(email))
@@ -44,6 +44,17 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine("Invalid email address.");
+            }*/
+            Console.WriteLine("Enter your mobile number: ");
+            string mobileNumber = Console.ReadLine();
+
+            if (ValidMobileNumber.IsValidMobileNumber(mobileNumber))
+            {
+                Console.WriteLine("Valid mobile number.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid mobile number.");
             }
             Console.ReadKey();
         }
