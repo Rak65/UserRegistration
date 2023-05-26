@@ -23,7 +23,7 @@ namespace UserRegistration
                 Console.WriteLine("Invalid first name.");
             }*/
 
-            Console.WriteLine("Enter your last name: ");
+            /*Console.WriteLine("Enter your last name: ");
             string lastName = Console.ReadLine();
 
             if (LastName.IsValidLastName(lastName))
@@ -33,6 +33,17 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine("Invalid last name.");
+            }*/
+            Console.WriteLine("Enter your email address: ");
+            string email = Console.ReadLine();
+
+            if (ValidEmail.IsValidEmail(email))
+            {
+                Console.WriteLine("Valid email address.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid email address.");
             }
             Console.ReadKey();
         }
