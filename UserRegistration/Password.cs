@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace UserRegistration
@@ -11,7 +12,20 @@ namespace UserRegistration
         public static bool IsValidPassword(string password)
         {
             // Check if the password length is at least 8 characters
-            return password.Length >= 8;
+            if (password.Length < 8)
+            {
+                return false;
+            }
+
+            // Check if the password contains at least 1 uppercase letter
+            if (!Regex.IsMatch(password, @"[A-Z]"))
+            {
+                return false;
+            }
+
+            // All rules passed
+            return true;
         }
+
     }
 }
