@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="FirstName.cs" />
     <Compile Include="Password.cs" />
+    <Compile Include="ValidateEmail.cs" />
     <Compile Include="ValidEmail.cs" />
     <Compile Include="LastName.cs" />
     <Compile Include="Program.cs" />

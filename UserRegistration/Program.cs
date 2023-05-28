@@ -56,7 +56,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("Invalid mobile number.");
             }*/
-            Console.WriteLine("Enter your password: ");
+            /*Console.WriteLine("Enter your password: ");
             string password = Console.ReadLine();
 
             if (Password.IsValidPassword(password))
@@ -66,6 +66,19 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine("Invalid password.");
+            }*/
+            string[] emailSamples = {
+            "john@example.com",
+            "jane@example.com",
+            "invalid_email",
+            "test@test@test.com",
+            "user123@gmail.com"
+            };
+
+            foreach (string email in emailSamples)
+            {
+                bool isValid = ValidateEmail.VEmail(email);
+                Console.WriteLine(email + ": " + (isValid ? "Valid" : "Invalid"));
             }
             Console.ReadKey();
         }
